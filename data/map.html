@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset=utf-8>
+    <title>GPX Photo Map</title>
+    <link rel="stylesheet" href="map_style.css">
+    <style>
+        #noticeContainer {position: relative; top: 20%; display: grid; place-items: center;}
+        #notice {font: 14px "Open Sans", sans-serif;}
+    </style>
+    <script>
+        // Location of gps.js is passed as a parameter when opening this html file
+        urlParams = new URLSearchParams(window.location.search);
+        albumLocal = urlParams.get('dir');
+        script = document.createElement('script');
+        
+        // If nothing is passed assume gps.js is next to this html file and the photos
+        if (albumLocal) script.src = albumLocal + '/gps.js';
+        else script.src = 'gps.js';
+        
+        document.head.appendChild(script);
+
+        // Initialize Google Map after a slight delay or this file won't load properly
+        function initializeDelay() {setTimeout(function() {initialize();}, 100);}
+        function setMapOptionsDelay() {setTimeout(function() {setMapOptions();}, 100);}
+    </script>
+</head>
+
+<body>
+    <!-- Insert your Google Maps API key below -->
+    <!-- https://developers.google.com/maps/documentation/javascript/get-api-key -->
+    <script src="https://maps.googleapis.com/maps/api/js?key="></script>
+
+    <script src="map_control.js"></script>
+
+    <script>google.maps.event.addDomListener(window, "load", initializeDelay);</script>
+    <script>google.maps.event.addDomListener(window, "load", setMapOptionsDelay);</script>
+
+    <div id="map_canvas">
+        <div id="noticeContainer">
+            <div id="notice">
+                <h1>The file gps.js was not loaded correctly</h1>
+                <p>Either let GPX Photo Map launch this map automatically</p>
+                <p>- or -</p>
+                <p>Copy these files into the same folder as the photos and the gps.js file:</p>
+                <ul>
+                    <li>map.html</li>
+                    <li>map_control.js</li>
+                    <li>map_style.css</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

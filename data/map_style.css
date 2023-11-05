@@ -1,0 +1,75 @@
+body {
+	margin: 0;
+}
+
+#map_canvas
+{ 
+    position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.gmapInfo {
+	width: 270px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	text-align: center; 
+}
+
+.gmapInfoText p {
+	margin: 0;
+}
+
+.gmapBut a {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	font-size: 3.5em;
+	width: 35px;
+	height: 100%;
+	top: 0;
+	right: 0;
+	padding: 0px 10px;
+}
+
+.gmapButPrev a {
+	justify-content: flex-start;
+	left: 0;
+}
+
+.gmapBut .arrowLeft {
+	width: 25px;
+	height: 25px;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' preserveAspectRatio='xMidYMid' width='25' height='25' viewBox='0 0 55 54'%3E%3Cdefs%3E%3Cstyle%3E .cls-2 %7B fill: %23FF7C7B; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M-0.005,26.905 C-0.005,26.905 27.296,53.406 27.296,53.406 C27.296,53.406 31.497,48.806 31.497,48.806 C31.497,48.806 11.395,30.105 11.395,30.105 C11.395,30.105 55.298,30.105 55.298,30.105 C55.298,30.105 55.298,23.305 55.298,23.305 C55.298,23.305 11.395,23.305 11.395,23.305 C11.395,23.305 31.497,4.603 31.497,4.603 C31.497,4.603 27.296,0.003 27.296,0.003 C27.296,0.003 -0.005,26.505 -0.005,26.505 C-0.005,26.505 -0.005,26.905 -0.005,26.905 Z' id='path-1' class='cls-2' fill-rule='evenodd'/%3E%3C/svg%3E%0A");
+}
+
+.gmapBut .arrowRight {
+	width: 25px;
+	height: 25px;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' preserveAspectRatio='xMidYMid' width='25' height='25' viewBox='0 0 56 54'%3E%3Cdefs%3E%3Cstyle%3E .cls-2 %7B fill: %23FF7C7B; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M55.217,26.505 C55.217,26.505 28.015,0.003 28.015,0.003 C28.015,0.003 23.715,4.603 23.715,4.603 C23.715,4.603 43.816,23.305 43.816,23.305 C43.816,23.305 0.014,23.305 0.014,23.305 C0.014,23.305 0.014,30.105 0.014,30.105 C0.014,30.105 43.816,30.105 43.816,30.105 C43.816,30.105 23.715,48.806 23.715,48.806 C23.715,48.806 28.015,53.406 28.015,53.406 C28.015,53.406 55.217,26.905 55.217,26.905 C55.217,26.905 55.217,26.505 55.217,26.505 Z' id='path-1' class='cls-2' fill-rule='evenodd'/%3E%3C/svg%3E%0A");
+}
+
+.gmapBut a:hover .arrowLeft {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' preserveAspectRatio='xMidYMid' width='25' height='25' viewBox='0 0 55 54'%3E%3Cdefs%3E%3Cstyle%3E .cls-2 %7B fill: %2300B2FF; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M-0.005,26.905 C-0.005,26.905 27.296,53.406 27.296,53.406 C27.296,53.406 31.497,48.806 31.497,48.806 C31.497,48.806 11.395,30.105 11.395,30.105 C11.395,30.105 55.298,30.105 55.298,30.105 C55.298,30.105 55.298,23.305 55.298,23.305 C55.298,23.305 11.395,23.305 11.395,23.305 C11.395,23.305 31.497,4.603 31.497,4.603 C31.497,4.603 27.296,0.003 27.296,0.003 C27.296,0.003 -0.005,26.505 -0.005,26.505 C-0.005,26.505 -0.005,26.905 -0.005,26.905 Z' id='path-1' class='cls-2' fill-rule='evenodd'/%3E%3C/svg%3E%0A");
+}
+
+.gmapBut a:hover .arrowRight {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' preserveAspectRatio='xMidYMid' width='25' height='25' viewBox='0 0 56 54'%3E%3Cdefs%3E%3Cstyle%3E .cls-2 %7B fill: %2300B2FF; %7D %3C/style%3E%3C/defs%3E%3Cpath d='M55.217,26.505 C55.217,26.505 28.015,0.003 28.015,0.003 C28.015,0.003 23.715,4.603 23.715,4.603 C23.715,4.603 43.816,23.305 43.816,23.305 C43.816,23.305 0.014,23.305 0.014,23.305 C0.014,23.305 0.014,30.105 0.014,30.105 C0.014,30.105 43.816,30.105 43.816,30.105 C43.816,30.105 23.715,48.806 23.715,48.806 C23.715,48.806 28.015,53.406 28.015,53.406 C28.015,53.406 55.217,26.905 55.217,26.905 C55.217,26.905 55.217,26.505 55.217,26.505 Z' id='path-1' class='cls-2' fill-rule='evenodd'/%3E%3C/svg%3E%0A");
+}
+
+.gmapInfoText p:first-of-type {
+	margin-top: 10px;
+}
+
+.gmapInfoImg {
+	margin-top: 10px;
+	border-radius: 3px;
+	min-height: 100px;
+}
+
+.gmapInfoImg img { 
+    max-width: 207px; 
+    max-height: 116px; 
+}

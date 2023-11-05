@@ -1,0 +1,9 @@
+line-length = 120
+
+[format]
+quote-style = "single"
+
+[flake8-quotes]
+docstring-quotes = "double"
+inline-quotes = "single"
+multiline-quotes = "single"
